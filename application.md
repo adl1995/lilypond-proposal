@@ -18,7 +18,7 @@
 
 Background
 ------
-Being good with computers from an early age, I took up Computer Science for my bachelors degree. Although I did not have any coding experience prior to my enrolement in college, I quickly caught up. It opened my eyes to a whole new world, and I started to experience things in a different way. Problem solving was the main thing that interested me. So, I started to solve / learn various mathematical problems and linked tried to code them.   
+Being good with computers from an early age, I took up Computer Science for my bachelors degree. Although I did not have any coding experience prior to my enrolement in college, I quickly caught up. It opened my eyes to a whole new world, and I started to experience things in a different way. Problem solving was the main thing that interested me. So, I started to solve / learn various mathematical problems and tried to code them.   
 
 In my previous semester, I enrolled myself in Digital Image Processing course. This is when I saw the beauty of mathematics applied in images. How a simple Gaussian function could be used to blur an image simply amazed me. During the tenure of this course I implemented filters (Gaussian, Sobel, Prewitt, Laplacian), edge detectors (Canny, Marr Hildreth), morphological operators (Convex hulling, Erosion, Dilation), object detectors (Generalized Hough transform, simple convolution), and seam carvers. These were implemented purely in Python, making no use of any library other than ``Numpy`` and ``Matplotlib``. This attenuated my interest in mathematics and I started linking it with real life. I have showcased these project on my [GitHub profile](https://github.com/adl1995). The most interesting algorithm I implemented was [Generalized Hough Tranfrom](https://github.com/adl1995/generalised-hough-transform). I was amazed as to how something as simple as an equation of line could lead to detection of objects in images.
 
@@ -47,16 +47,21 @@ The other main objective of this project is auto-generated documentation for sou
 
 There has been an active discussion on which tool to use for generating documentation. I have suggested to go with Shpinx over Doxygen, it provides an interface for configuration with third party languages. On top of this, Grako parser generator will have to integrated for searching patterns. Once all this is set up, one would essenstially execute a `sphinx-build` command and this would parse all the source files and create a clean documentation at the end.
 
+The openLilyLib repositroy contains a lot of legacy code. Replacing this with up-to-date strcuture and porting the old package to the new infrastructure is also a part of this project.
+
 Benefits
 -
 The first thing that a user does when trying out a new software is to look at its documentation. It reveals how well managed and organized the software is. If the information is presented in a neat manner, the time to get it running is reduced considerably. In my opinion, a software should provide two branches of documentation, one that is more 'user-friendly' and the other that is more focused towards 'developers'. Of course, numerous softwares already provide this through popup annotations.
 
 Work done
 -----
-I have actively conversed with Urs Liska who assigned me with some qualification tasks. Firsly, I created a test suite for [oll-core](https://github.com/openlilylib/oll-core/tree/adeel/test-suite2) by taking the model from original tests in [snippets](https://github.com/openlilylib/snippets) directory for openLilyLib. The old test suite in snippets required `version "2.17.25"`, however the oll-core package was made for `version "2.19.22"`,so in order to make it compatible the `\loadModule` tag had to be updated.  
+I have actively conversed with Urs Liska and Matteo Ceccarello, the mentors of this project. They assigned me with some qualification tasks. Firsly, I created a test suite for [oll-core](https://github.com/openlilylib/oll-core/tree/adeel/test-suite2) by taking the model from original tests in [snippets](https://github.com/openlilylib/snippets) directory for openLilyLib. The old test suite in snippets required `version "2.17.25"`, however the oll-core package was made for `version "2.19.22"`, so in order to make it compatible the `\loadModule` tag had to be updated.  
 
-repository
-mention Lydoc, Grako, Sphinx, test suite oll-core, gridly.
+Apart from this I also made a commit in the GridLY package (https://github.com/openlilylib/gridly/commits/master). The work basically involved reproducing the package from snippets repositroy.
+
+Lastly, I set up this (https://github.com/adl1995/lilypond-sphinx) repository for 
+harvesting .ly files and extract documentation from it. This work is still undergoing. I also started to work with Lydoc (https://github.com/Cecca/lydoc), written by Matteo. It also makes use of Sphinx and Gecko. It was my opinion to build on top of this current work to avoid re-inventing the wheel. 
+
 Deliverables
 -
 
